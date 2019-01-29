@@ -1,22 +1,22 @@
-package com.wutqi.p1.command_pattern;
+package com.wutqi.p1.command_pattern.p1.basic;
 
 /**
- * 关空调命令
+ * 开空调命令
  * @author wuqi
- * @Date 2019/1/29 13:58
+ * @Date 2019/1/29 13:56
  */
-public class AirConditionOffCommand implements Command {
+public class AirConditionOnCommand implements Command {
     private AirCondition airCondition;
     private Integer preStatus;
 
-    public AirConditionOffCommand(AirCondition airCondition){
+    public AirConditionOnCommand(AirCondition airCondition){
         this.airCondition = airCondition;
     }
 
     @Override
     public void execute() {
         preStatus = airCondition.getStatus();
-        airCondition.off();
+        airCondition.on();
     }
 
     @Override

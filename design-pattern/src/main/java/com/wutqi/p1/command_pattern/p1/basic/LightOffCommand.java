@@ -1,4 +1,4 @@
-package com.wutqi.p1.command_pattern;
+package com.wutqi.p1.command_pattern.p1.basic;
 
 /**
  * 关灯命令
