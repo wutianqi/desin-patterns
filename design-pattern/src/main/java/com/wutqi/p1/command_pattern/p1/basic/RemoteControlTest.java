@@ -19,17 +19,11 @@ public class RemoteControlTest {
         AirConditionOffCommand airConditionOffCommand = new AirConditionOffCommand(airCondition);
         RefrigeratorOnCommand refrigeratorOnCommand = new RefrigeratorOnCommand(refrigerator);
         RefrigeratorOffCommand refrigeratorOffCommand = new RefrigeratorOffCommand(refrigerator);
-        Command[] onCommands = new Command[3];
-        onCommands[0] = lightOnCommand;
-        onCommands[1] = airConditionOnCommand;
-        onCommands[2] = refrigeratorOnCommand;
-        Command[] offCommands = new Command[3];
-        offCommands[0] = lightOffCommand;
-        offCommands[1] = airConditionOffCommand;
-        offCommands[2] = refrigeratorOffCommand;
 
         RemoteControl remoteControl = new RemoteControl();
-        remoteControl.setCommands(onCommands,offCommands);
+        remoteControl.setCommand(0,lightOnCommand,lightOffCommand);
+        remoteControl.setCommand(1,airConditionOnCommand,airConditionOffCommand);
+        remoteControl.setCommand(2,refrigeratorOnCommand,refrigeratorOffCommand);
 
         //打开电灯
         remoteControl.onButtonPushed(0);

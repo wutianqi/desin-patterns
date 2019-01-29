@@ -37,12 +37,13 @@ public class RemoteControl {
 
     /**
      * 设置按钮指令
-     * @param onCommands
-     * @param offCommands
+     * @param slot
+     * @param onCommand
+     * @param offCommand
      */
-    public void setCommands(Command[] onCommands, Command[] offCommands){
-        this.onCommands = onCommands;
-        this.offCommands = offCommands;
+    public void setCommand(int slot,Command onCommand, Command offCommand){
+        onCommands[slot] = onCommand;
+        offCommands[slot] = offCommand;
     }
 
     /**
