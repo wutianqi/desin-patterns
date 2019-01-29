@@ -7,5 +7,6 @@ package com.wutqi.c.thirdChap.decorate;
  */
 public abstract class CondimentDecorator extends Beverage {
     public abstract String getDescription();
+    @Override
     public abstract SizeEnum getSize();
 }
