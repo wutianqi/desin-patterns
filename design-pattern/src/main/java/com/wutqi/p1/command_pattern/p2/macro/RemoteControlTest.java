@@ -36,5 +36,13 @@ public class RemoteControlTest {
         MacroCommand onMacroCommand = new MacroCommand(onCommands);
         MacroCommand offMacroCommad = new MacroCommand(offCommands);
         RemoteControl remoteControl = new RemoteControl();
+        remoteControl.setCommand(0,onMacroCommand,offMacroCommad);
+
+        //打开电灯，打开空调，打开冰箱
+        remoteControl.onButtonPushed(0);
+        //关上电灯，关上空调，关掉冰箱
+        remoteControl.offButtonPushed(0);
+        //撤销
+        remoteControl.undo();
     }
 }
